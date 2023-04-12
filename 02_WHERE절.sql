@@ -54,6 +54,10 @@ FROM employees
 WHERE hire_date LIKE '___05%';
 
 -- IS NULL (null값을 찾음)
+
+--SELECT * FROM employees
+--WHERE manager_id = NULL; (X)
+
 SELECT * FROM employees
 WHERE manager_id IS NULL;
 
@@ -73,6 +77,7 @@ AND salary >= 6000;
 -- 데이터의 정렬 (SELECT 구문의 가장 마지막에 배치됩니다)
 -- ASC: ascending 오름차순
 -- DESC: descending 내림차순
+-- ORDER BY는 ASC or DESC가 작성이 되지 않아도 자동으로 정렬을 해준다. (기본 오름차순)
 -- ORDER BY는 가장 마지막에 배치되어야 한다
 SELECT * FROM employees
 ORDER BY hire_date ASC;
@@ -91,3 +96,4 @@ ORDER BY employee_id DESC;
 SELECT first_name, salary*12 AS pay
 FROM employees
 ORDER BY pay ASC;
+
