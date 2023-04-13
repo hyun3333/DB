@@ -28,7 +28,7 @@ SELECT
     first_name, LENGTH(first_name), INSTR(first_name, 'a') 
 FROM employees;
 
--- substr(문자열 자르기), concat(문자를 연결) 1부터 시작
+-- substr(문자열 자르기), concat(문자를 연결) 1부터 시작 ,n까지 미만x
 SELECT
     'abcdef' AS ex,
     SUBSTR('abcdef', 1, 4),

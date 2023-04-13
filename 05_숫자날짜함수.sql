@@ -23,10 +23,10 @@ FROM dual;
 SELECT 10/4, MOD(10, 4)
 FROM dual;
 
--- sysdate(날짜 함수)
+-- sysdate(날짜 함수 시간 정보 포함)
 SELECT sysdate FROM dual;
 
--- systiemstamp(날짜 함수 시간 정보 포함) 
+-- systiemstamp(날짜 함수 시간 밀리초 정보 포함) 
 SELECT systimestamp FROM dual;
 
 -- 날짜도 연산이 가능합니다.
@@ -40,7 +40,7 @@ SELECT first_name, hire_date,
 FROM employees; -- 주수
 
 SELECT first_name, hire_date,
-(sysdate - hire_date) / 365 AS week
+(sysdate - hire_date) / 365 AS year
 FROM employees; -- 년수
 
 -- 날짜 반올림, 절사
