@@ -5,8 +5,8 @@ SELECT
 FROM info i
 INNER JOIN auth a
 ON i.auth_id = a.auth_id;
-
 -- 오라클 문법 (잘 사용 안합니다.)
+------------------------------------
 SELECT
     *
 FROM info i, auth a
@@ -38,6 +38,7 @@ SELECT
     *
 FROM info i LEFT JOIN auth a
 ON i.auth_id = a.auth_id;
+--------------------------------------------
 -- 오라클 문법
 SELECT
     *
