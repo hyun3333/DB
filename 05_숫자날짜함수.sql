@@ -53,3 +53,5 @@ SELECT TRUNC(sysdate) FROM dual; -- 정오를 기준으로 절사
 SELECT TRUNC(sysdate, 'year') FROM dual; -- 1년의 반(6월 말)을 기준으로 절사
 SELECT TRUNC(sysdate, 'month') FROM dual; -- 15일 기준으로 절사
 SELECT TRUNC(sysdate, 'day') FROM dual; -- 해당 주의 일요일 날짜 기준으로 절사
+
+-- 비교 연산자에서 <>는 같지 않다
