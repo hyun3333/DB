@@ -219,7 +219,26 @@ ORDER BY country_name ASC;
 --employees테이블, departments테이블을 left조인 hire_date를 오름차순 기준으로 1-10번째 데이터만 출력합니다
 --조건) rownum을 적용하여 번호, 직원아이디, 이름, 전화번호, 입사일, 부서아이디, 부서이름 을 출력합니다.
 --조건) hire_date를 기준으로 오름차순 정렬 되어야 합니다. rownum이 틀어지면 안됩니다.
-
+SELECT * FROM employees;
+SELECT * FROM
+    (
+    SELECT 
+        ROWNUM AS rn,
+        tbl.*
+    FROM
+        (
+        SELECT
+            e.employee_id,
+            e.job_id,
+            e.first_name || ' ' || e.last_name AS name,
+            e.phone_number, e.hire_date,
+            d.department_id, d.department_name
+        FROM employees e LEFT JOIN departments d
+        ON e.department_id = d.department_id
+        ORDER BY hire_date ASC
+        )tbl
+    )
+WHERE rn > 0 AND rn <= 10;
 --문제 13. 
 ----EMPLOYEES 과 DEPARTMENTS 테이블에서 JOB_ID가 SA_MAN 사원의 정보의 LAST_NAME, JOB_ID, 
 --DEPARTMENT_ID,DEPARTMENT_NAME을 출력하세요.
