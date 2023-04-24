@@ -6,6 +6,7 @@
 -- NOT NULL: null을 허용하지 않음.
 -- FOREIGN KEY: 참조하는 테이블의 PRIMARY KEY를 저장하는 컬럼
 -- CHECK: 정의된 형식만 저장되도록 허용.
+DROP TABLE dept2;
 
 -- 컬럼 레벨 제약 조건 (컬럼 선언마다 제약 조건)
 CREATE TABLE dept2 (
@@ -18,7 +19,7 @@ CREATE TABLE dept2 (
 ----
 -- 테이블 레벨 제약 조건(모든 열 선언 후 제약조건을 취하는 방식)
 
-CREATE TABLE dept2(
+CREATE TABLE 1dept2(
     dept_no NUMBER(2),
     dept_name VARCHAR2(14) NOT NULL,
     loca NUMBER(4),
